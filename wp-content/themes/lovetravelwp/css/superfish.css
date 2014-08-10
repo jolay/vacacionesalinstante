@@ -1,0 +1,318 @@
+/*** ESSENTIAL STYLES ***/
+.menu, .menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu li {
+	position: relative;
+}
+.menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.menu > li {
+	float: left;
+}
+.menu li:hover > ul,
+.menu li.sfHover > ul {
+	display: block;
+}
+
+.menu a {
+	display: block;
+	position: relative;
+}
+.menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+
+/*** DEMO SKIN ***/
+.menu {
+	float: right;
+	margin:0px;
+}
+.menu ul {
+	min-width: 12em; /* allow long menu items to determine submenu width */
+	*width: 12em; /* no auto sub width for IE7, see white-space comment below */	
+
+	/*background-image:url(../img/header/trianglemenulight.png);
+	background-repeat:no-repeat;
+	background-position:25px 5px;*/
+	
+	padding-top:0px;
+	margin-top:0px;
+}
+.menu ul li ul{
+	
+	/*background-image:url(../img/header/trianglemenulightvertical.png);
+	background-repeat:no-repeat;
+	background-position:5px 13px;*/
+	
+	margin-top:-1px;
+	padding-top:0px;
+	margin-left:-1px;
+	padding-left:0px;
+	
+}
+.menu a {
+	padding: 19px 25px;
+	padding-top:20px;
+	text-decoration: none;
+	zoom: 1; /* IE7 */
+}
+.menu li ul a {
+	padding: 15px 25px;
+}
+.menu li {
+	/*background: #fff;*/
+	white-space: nowrap; /* no need for Supersubs plugin */
+	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	-webkit-transition: background .2s;
+	transition: background .2s;
+}
+.menu ul ul li {
+	background: #fff;
+}
+
+
+
+/*light*/
+.navigationmenulight .menu li:hover , .navigationmenulight .menu .evidencelabelmenu{
+	background: #f9fafc;
+}
+.navigationmenulight .menu a {
+	color: #5E6D81;
+}
+.navigationmenulight .menu li a {
+	border-left: 1px solid #EBEEF2;
+	font-weight:400;
+	
+	background-image:url(../img/header/filtermenu.png);
+	background-repeat:no-repeat;
+	background-size:100px 100px;
+	background-position:50px;
+	
+}
+.navigationmenulight .menu > li:last-child{
+	border-right: 1px solid #EBEEF2;	
+}
+.navigationmenulight .menu ul li {
+	background: #fff;
+	border-top:1px solid #EBEEF2;	
+}
+.navigationmenulight .menu li ul li:last-child{
+	border-bottom:1px solid #EBEEF2;	
+}
+.navigationmenulight .menu li ul a {
+	color:#A9A9A9;
+	border-right: 1px solid #EBEEF2;
+	font-weight: 300;
+}
+.navigationmenulight .lastmenudropitem{
+	border-bottom:1px solid #EBEEF2;	
+}
+/*light*/
+
+
+
+/*dark*/
+.navigationmenudark .menu li:hover , .navigationmenudark .menu .evidencelabelmenu{
+	background: #4A515B;
+}
+.navigationmenudark .menu li a {
+	color: #B3BBC6;
+	font-weight:400;
+}
+.navigationmenudark .menu a {
+	border-left: 1px solid #55738F;
+}
+.navigationmenudark .menu > li:last-child{
+	border-right: 1px solid #55738F;	
+}
+.navigationmenudark .menu ul li {
+	background: #434A54;
+	border-top:1px solid #55738F;	
+}
+.navigationmenudark .menu li ul li:last-child{
+	border-bottom:1px solid #55738F;	
+}
+.navigationmenudark .menu li ul a {
+	color:#B3BBC6;
+	border-right: 1px solid #55738F;
+	font-weight: 300;
+}
+.navigationmenudark .lastmenudropitem{
+	border-bottom:1px solid #55738F;	
+}
+.navigationmenudark .menu ul {
+	background-image:url(../img/header/trianglemenudark.png);
+}
+.navigationmenudark .menu ul li ul{
+	background-image:url(../img/header/trianglemenudarkvertical.png);	
+}
+/*dark*/
+
+
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(212,212,212,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: #EBEEF2; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(212,212,212,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: #EBEEF2;
+}
+
+
+
+/*megamenu*/
+.lt-megamenu{
+	position: initial !important;
+}
+
+.lt-megamenu ul a{
+	border-width: 0px !important;
+	margin: 0px;
+	padding: 0px;
+	color: #A9A9A9 !important;
+}
+
+.lt-megamenu > ul{
+	
+
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(244, 244, 246, 1.0);
+	box-shadow: inset 0px 0px 0px 1px rgba(244, 244, 246, 1.0);
+
+	border-top: 1px solid #EBEEF2;
+	border-bottom: 1px solid #EBEEF2;
+
+	background-color: #fff !important;
+	position: fixed;
+	left: 50%;
+	width: 1180px;
+	margin-left: -590px;
+	background-image: none;
+	padding: 0px;
+
+	padding: 0px 0px 0px 0px;
+	margin-top: 0px;
+}
+.lt-megamenu ul > li{
+	display: inline-block !important;
+	float: left;
+	margin:0px !important;
+	border-width: 0px !important;
+	
+}
+.lt-megamenu > ul > li:first-child{
+	margin:0px !important;
+}
+
+.lt-megamenu > ul > li:first-child ol li{
+	border-left: 1px solid #EBEEF2 !important;
+}
+.lt-megamenu > ul > li:first-child > a{
+	border-left: 1px solid #EBEEF2 !important;
+}
+
+.lt-megamenu > ul > li:last-child{
+	margin:0px !important;
+}
+.lt-megamenu > ul > li > a{
+	padding: 15px;
+	background-color: #f9fafc;
+	background-image: none !important;
+	border-right: 1px solid #EBEEF2 !important;
+}
+.lt-megamenu ul li ol li{
+	border-top: 1px solid #EBEEF2 !important;
+}
+.lt-megamenu ul li a:hover{
+	
+	box-shadow: inset 0px 0px 0px 0px rgba(244, 244, 246, 1.0) !important;
+}
+.lt-megamenu ol li a{
+	color: #A9A9A9 !important;
+	font-size: 15px;
+
+	background-image: url(../img/blog/bglisidebar.png) !important;
+	background-size:8px 11px !important;
+	background-position: left 13px top 18px !important;
+	padding-left: 30px;
+	border-right: 1px solid #EBEEF2 !important;
+
+
+}
+.lt-megamenu ol li{
+	border-width: 0px !important;
+}
+
+.lt-megamenu ul li > ul{
+	display: block !important;
+	position: initial;
+	float: left;
+	width: 100%;
+	background-color: yellow;
+	margin:0px;
+	padding: 0px;
+	background-image: none;
+}
+.lt-megamenu ul li ul li{
+	background-color: red !important;
+	margin:0px !important;
+	padding: 0px;
+	float: left;
+	width: 100%;
+}
+.lt-megamenu ul li ul li a{
+	background-image: none !important;
+	padding: 5px 20px;
+	color: #A9A9A9 !important;
+	font-size: 15px;
+}
+
+/*grid megamenu*/
+.lt-megamenu .grid_3{
+	width: 295px;
+}
+.lt-megamenu .grid_4{
+	width: 393px;
+}
+.lt-megamenu .grid_6{
+	width: 590px;
+}
