@@ -13,8 +13,6 @@
  *
  * @package WordPress
  */
-define('WP_HOME','http://localhost/vacacionesalinstante/');
-define('WP_SITEURL','http://localhost/vacacionesalinstante/');
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'vacacionesdb');
