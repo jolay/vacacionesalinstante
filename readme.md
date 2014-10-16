@@ -92,5 +92,7 @@
 <h1>License</h1>
 <p>WordPress is free software, and is released under the terms of the <abbr title="GNU General Public License">GPL</abbr> version 2 or (at your option) any later version. See <a href="license.txt">license.txt</a>.</p>
 
+Developer:
+    * [Servicios de Marketing Digital](http://www.neyra.mx/) Neyra Web
 </body>
 </html>
